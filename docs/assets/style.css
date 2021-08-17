@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    height: 100vh;
+    background-color: black;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    
+}
+
+.content{
+    width: 100%;
+    height:100vh;
+}
+
+.sidebar{
+
+    width: 30vw;
+    height:100vh;
+    max-width: 300px;
+    position: sticky;
+    background-color: rgba(255, 255, 0, 0);
+}
+
+.Separator{
+    clear: both;
+    height: 40px;
+}
+
+
+/* Sidebar */
+
+.nav-btn{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: none; /* Change1 */
+}
+
+.open-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.nav{
+    position: fixed;
+    left: 0px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+
+    /* display:none; */
+}
+
+
+
+
+.nav.visible{
+    transform: translateX(0);
+}
+
+.nav-white{
+    background-color: black;
+    
+}
+.nav-white.visible{
+    transition-delay: 0.4s;
+}
+
+li{
+    margin: 20% 0px; 
+    list-style-type: none;
+}
+
+li a { 
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 5%;
+    color: white;
+}
+
+.close-btn{
+    right: 5px;
+    top: 10px;
+    position: absolute;
+}
+
+li ul li a {
+    padding-left: 30%;
+    
+} 
+
+i{
+    color: white
+}
+
+p{
+    font-size:18px
+}
+
+/*  Header */
+
+header{
+    background: url('./images/Header/header.png') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 45%;
+}
+
+/* Init */
+
+.Init{
+    background: url('./images/Header/Piano.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.Services{
+    background: url('./images/Header/Services.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.iniText{
+    color:rgb(246, 246, 246);
+    background-color:rgba(146, 100, 36, 0.418);
+    position:relative;
+    width: 100%;
+    height: 100%;
+    padding: 2.5%;
+    bottom: 0;
+ 
+    flex-direction: column;
+    text-align:left;
+    justify-content:flex-end;
+    font-size: 1.2em;
+    box-shadow: 0px 0px;
+
+    display: flex;
+    
+}
+
+.Initial{
+    height: 50vh; 
+    background-color: black;
+    display:flex;
+    gap:1%;
+    margin-left: 2%; 
+}
+
+.Init, .Services{
+    width: 47%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+/* Store Section */
+
+.Store p{
+    color:rgb(246, 246, 246);
+    font-size: 20px;
+    background-color: rgba(218, 165, 32, 0.335);
+    padding: 5px;
+
+    display:block;
+}
+
+
+
+.strings, .woodwinds{
+    display:flex;
+    justify-content: space-around;
+}
+
+.guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+    
+    width:20vw;
+    height:90vh;
+    border: solid 1px white;
+    margin-top: 40px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+
+}
+
+.percussion{
+
+    display: flex;
+    flex-flow: column;
+    justify-content:space-around;
+    align-items:center;
+    margin-bottom: 20px
+
+}
+
+.drums, .piano{
+    width:45vw;
+    height: 50vh;
+    border: solid 1px white;
+    margin-top: 20px;
+
+
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+
+}
+
+.guitar{
+    background: url('./images/Instruments/Guitar.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.violin{
+    background: url('./images/Instruments/Violin.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.bass{
+    background: url('./images/Instruments/Bass.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.flute{
+    background: url('./images/Instruments/Flute.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.clarinet{
+    background: url('./images/Instruments/Clarinet.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.trumpet{
+    background: url('./images/Instruments/Trumpet.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.drums{
+    background: url('./images/Instruments/Drums.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.piano{
+    background: url('./images/Instruments/Piano.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+
+/* Concert */
+
+h1,p{
+    color: white;
+    padding:1vw;
+}
+
+.concert p{
+    padding: 2vw;
+}
+
+.concert{
+    margin-bottom: 30px;
+}
+
+.gifs{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 2vw;
+    
+}
+
+.gif{
+    height:30vh;
+    width: 30vw;
+    background-color: green;
+    border: solid 1px white;
+}
+
+
+
+/* Producer */
+
+.producer_content{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    color:rgb(246, 246, 246);
+    gap: 2vw;
+    margin-top: 20px; 
+}
+
+.producer_content img{
+    width: 30vw;
+    height: 80vh;
+}
+
+/* Academy */
+
+.academy_content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    color:rgb(246, 246, 246);
+    gap: 2vw;
+    margin-top: 20px; 
+}
+
+.academy_content img{
+    width: 30vw;
+    height: 70vh;
+}
+
+/*Contact*/
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 4%;      
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1em;
+    align-items: center;
+}
+
+form input{
+    border-radius: 28px;
+    border: 0px;
+    padding-left: 20px;
+}
+
+form textarea{
+    border-radius: 28px;
+    border: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+button{
+    border-radius: 28px;
+    border: 0px;
+}
+
+
+.f1{
+    height:25px;
+    width: 100%;
+
+}
+
+.f2{
+    height:200px;
+    width: 100%;
+}
+
+button{
+    width:20%;
+    justify-content:center;
+    background-color:rgba(142, 186, 255, 1)
+}
+
+
+
+footer{
+    background-color:rgba(241, 241, 241, 0.534);
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: -20px;
+    color: rgba(25, 39, 84, 1);
+
+}
+
+footer img{
+    width: 3vw;
+    height: 6vh;
+    padding-right: 2%;
+}
+
+
+/* Media  width: 720px & 360px */
+
+@media (max-width:840px) {
+
+    .nav{
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+        width: 40vw;
+        max-width: 220px;
+    }
+
+    .nav-btn{
+        display: flex;
+    }
+
+
+    .main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    }
+
+    .main{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color:blue;
+        overflow: hidden;
+    }
+
+    header{
+        background: url('./img/Header/header.png') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 40%;
+        display:none;
+    }
+
+
+}
+
+
+@media (max-width:360px) {
+
+    .nav{
+        width: 100vw;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+}
