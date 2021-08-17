@@ -188,6 +188,10 @@ header{
     justify-content: space-around;
 }
 
+.woodwinds{
+    margin-bottom: 20px;
+}
+
 .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
     
     width:20vw;
@@ -327,6 +331,7 @@ h1,p{
     color:rgb(246, 246, 246);
     gap: 2vw;
     margin-top: 20px; 
+    height:80vh;
 }
 
 .academy_content img{
@@ -334,8 +339,13 @@ h1,p{
     height: 70vh;
 }
 
+
 /*Contact*/
 .form{
+    text-align: center;
+}
+
+.form_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -350,6 +360,8 @@ form{
     width: 60%;
     gap: 1em;
     align-items: center;
+    height:100vh;
+    
 }
 
 form input{
@@ -396,7 +408,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    padding: 3%;
     align-items: center;
     height: 10vh;
     margin-bottom: -20px;
