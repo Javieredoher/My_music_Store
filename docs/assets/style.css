@@ -71,9 +71,6 @@ body{
     /* display:none; */
 }
 
-
-
-
 .nav.visible{
     transform: translateX(0);
 }
@@ -120,7 +117,7 @@ p{
 /*  Header */
 
 header{
-    background: url('./images/Header/header.png') no-repeat center;
+    background: url('./images/Header/Header.png') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 45%;
