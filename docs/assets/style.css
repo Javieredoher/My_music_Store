@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -8,28 +12,24 @@
 
 body{
     font-family: 'Muli', sans-serif;
-    height: 100vh;
     background-color: black;
 }
 
-.main{
+.main{ 
     display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    
+    flex-direction: row;  
+    overflow-x: hidden;
 }
 
 .content{
-    width: 100%;
-    height:100vh;
+    width: 80vw;
+    overflow-x: hidden;
 }
 
 .sidebar{
 
-    width: 30vw;
+    width: 20vw; 
     height:100vh;
-    max-width: 300px;
     position: sticky;
     background-color: rgba(255, 255, 0, 0);
 }
@@ -37,6 +37,10 @@ body{
 .Separator{
     clear: both;
     height: 40px;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -56,17 +60,15 @@ body{
 }
 
 .nav{
+    
     position: fixed;
-    left: 0px;
-    width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    max-width: 300px;
+    max-width: 20vw; 
 
     /* display:none; */
 }
@@ -75,11 +77,11 @@ body{
     transform: translateX(0);
 }
 
-.nav-white{
+.nav-black{
     background-color: black;
     
 }
-.nav-white.visible{
+.nav-black.visible{
     transition-delay: 0.4s;
 }
 
@@ -118,69 +120,31 @@ p{
 
 header{
     background: url('./images/Header/Header.png') no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
     width: 100%;
-    height: 45%;
+    height: 45vh;
 }
 
-/* Init */
-
-.Init{
-    background: url('./images/Header/Piano.png') no-repeat center;
-    background-size: 100% 100%; 
-}
-
-.Services{
-    background: url('./images/Header/Services.png') no-repeat center;
-    background-size: 100% 100%; 
-}
-
-.iniText{
-    color:rgb(246, 246, 246);
-    background-color:rgba(146, 100, 36, 0.418);
-    position:relative;
-    width: 100%;
-    height: 100%;
-    padding: 2.5%;
-    bottom: 0;
- 
-    flex-direction: column;
-    text-align:left;
-    justify-content:flex-end;
-    font-size: 1.2em;
-    box-shadow: 0px 0px;
-
-    display: flex;
-    
-}
-
-.Initial{
-    height: 50vh; 
-    background-color: black;
-    display:flex;
-    gap:1%;
-    margin-left: 2%; 
-}
-
-.Init, .Services{
-    width: 47%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
 
 /* Store Section */
 
 .Store p{
-    color:rgb(246, 246, 246);
+    color:white;
     font-size: 20px;
-    background-color: rgba(218, 165, 32, 0.335);
+    background-color: rgba(218, 165, 32, 0.767);
     padding: 5px;
-
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     display:block;
+    text-align: center;
 }
 
+.percussion p{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 
 .strings, .woodwinds{
@@ -193,39 +157,31 @@ header{
 }
 
 .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
-    
     width:20vw;
     height:90vh;
-    border: solid 1px white;
     margin-top: 40px;
-
+    border-radius: 20px;   
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-
 }
 
 .percussion{
-
     display: flex;
     flex-flow: column;
     justify-content:space-around;
     align-items:center;
     margin-bottom: 20px
-
 }
 
 .drums, .piano{
     width:45vw;
-    height: 50vh;
-    border: solid 1px white;
+    height: 45vh;
+    border-radius:20px;
     margin-top: 20px;
-
-
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
-
 }
 
 .guitar{
@@ -271,7 +227,7 @@ header{
 
 /* Concert */
 
-h1,p{
+p, h1{
     color: white;
     padding:1vw;
 }
@@ -290,15 +246,62 @@ h1,p{
     justify-content: space-around;
     flex-flow: row wrap;
     gap: 2vw;
-    
 }
 
-.gif{
-    height:30vh;
-    width: 30vw;
-    background-color: green;
-    border: solid 1px white;
+.gif_lvl1{
+    display:flex;
+    width: 60vw;
+    height:65vh;
+
+    gap:2%;
 }
+
+.gif1,.gif2,.gif3{
+    height:100%;
+    width: 32%;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    gap:5%;
+}
+
+.gif1_1{
+    width:100%;
+    height:35%;
+    background-image: url('https://media0.giphy.com/media/voHUEbyWiHe5a/giphy.gif?cid=790b7611fd41cb0c21499e6fc873d80368a2b05e36fbb769&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+}
+
+
+.gif1_2{
+    width:100%;
+    height:60%;  
+    background-image: url('https://media0.giphy.com/media/1rSioV1UX6ZWZv9n4q/giphy.gif?cid=790b7611e1a6b1b79224cae6e7eff03b80a9ea95f3c5853f&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+}
+
+.gif2{
+    background-image: url('https://media0.giphy.com/media/l0HlvGByFLvFJreYE/giphy.gif?cid=790b7611a3a2d60d5e02dbacd084944e0bb3d2fe3f7c520d&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+}
+
+.gif3_1{
+    width:100%;
+    height:50%;
+    background-image: url('https://media0.giphy.com/media/l2a8oapqbUhlanPK0m/giphy.gif?cid=790b7611c53f02b4e74b92092f1c9074611fe185e6574e0d&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+
+}
+
+.gif3_2{
+    width:100%;
+    height:50%;  
+    background-image: url('https://media2.giphy.com/media/qVDkVk4xo0q0U/giphy.gif?cid=790b76113df113ea791d8686a084887e5959ab1afe4a3df6&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+}
+
+
+
 
 
 
@@ -330,8 +333,7 @@ h1,p{
     flex-flow: row;
     color:rgb(246, 246, 246);
     gap: 2vw;
-    margin-top: 20px; 
-    height:80vh;
+    height:90vh;
 }
 
 .academy_content img{
@@ -341,33 +343,50 @@ h1,p{
 
 
 /*Contact*/
+
 .form{
     text-align: center;
 }
 
 .form_content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.5em;
     margin-top: 4%;      
 }
 
-form{
+.payment{    
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 60%;
-    gap: 1em;
+    gap: 1.0em;
     align-items: center;
-    height:100vh;
-    
+}
+
+.payment img{
+    width: 85px;
+    height: 85px;
+    padding: 10px
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+    margin: 5%;
+    align-items: center;
+    gap: 5px;
 }
 
 form input{
     border-radius: 28px;
     border: 0px;
     padding-left: 20px;
+    font-size:1.1em;
 }
 
 form textarea{
@@ -375,11 +394,19 @@ form textarea{
     border: 0px;
     padding-left: 20px;
     padding-top: 20px;
+    font-size:1.4em;
+
 }
 
 button{
     border-radius: 28px;
-    border: 0px;
+    height: 2em;
+    width: 10em;
+    justify-content:center;
+    background-color:goldenrod;
+    margin-top:1%;
+    font-size:1em;
+
 }
 
 
@@ -394,16 +421,11 @@ button{
     width: 100%;
 }
 
-button{
-    width:20%;
-    justify-content:center;
-    background-color:rgba(142, 186, 255, 1)
-}
 
-
+/*Footer*/
 
 footer{
-    background-color:rgba(241, 241, 241, 0.534);
+    background-color:goldenrod;
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
@@ -411,9 +433,6 @@ footer{
     padding: 3%;
     align-items: center;
     height: 10vh;
-    margin-bottom: -20px;
-    color: rgba(25, 39, 84, 1);
-
 }
 
 footer img{

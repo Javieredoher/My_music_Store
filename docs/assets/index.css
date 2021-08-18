@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: black;
+}
+
+p{
+    font-size:20px
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*  Header */
+
+header{
+    background: url('./images/Header/Header.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 45vh;
+}
+
+/* Init */
+
+.Init{
+    background: url('./images/Header/Piano.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.Services{
+    background: url('./images/Header/Services.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.iniText{
+    color:rgb(246, 246, 246);
+    background-color:rgba(146, 100, 36, 0.534);
+    position:relative;
+    width: 100%;
+    height: 100%;
+    padding: 2.5%;
+    bottom: 0;
+ 
+    flex-direction: column;
+    text-align:left;
+    justify-content:flex-end;
+    font-size: 1.2em;
+    box-shadow: 0px 0px;
+    display: flex;  
+}
+
+.Initial{
+    height: 50vh; 
+    background-color: black;
+    display:flex;
+    gap:1%;
+    margin-left: 2%; 
+    justify-content: space-around;
+}
+
+.Init, .Services{
+    width: 42%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
