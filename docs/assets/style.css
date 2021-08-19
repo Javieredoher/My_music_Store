@@ -519,7 +519,6 @@ footer{
     padding: 3%;
     height: 10vh;
 
-    margin-bottom: -20px;
 }
 
 footer img{
@@ -557,6 +556,7 @@ footer img{
         height: 3%;
         padding:1%;
         margin-top:50px;
+
     }
 
 
@@ -681,6 +681,7 @@ footer img{
 }
 
 @media (max-width:780px){
+
     .wrapper{
         flex-direction: column;
     }
@@ -704,10 +705,13 @@ footer img{
 
     .navigation{
         padding-left: 100px;
+        width: 100vw;
     }
 
-
-
+    .sidebar{
+        background-color:red;
+        height:100%
+    }
 
 
 }
@@ -742,6 +746,7 @@ footer img{
 
     .navigation{
         padding-left: 150px;
+        font-size: 12px;
 
     }
 
