@@ -26,6 +26,7 @@ body{
 .content{
     width: 80vw;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .sidebar{
@@ -96,11 +97,9 @@ a {
 
 .nav-black{
     background-color: black;
-    display: flex;
-   
-
-    
+    display: flex;    
 }
+
 .nav-black.visible{
     transition-delay: 0.4s;
 }
@@ -335,10 +334,10 @@ p, h1{
 
 @keyframes slide {
 
-    0%{ transform: translateX(-15%);}
+    0%{ transform: translateX(-0%);}
     12%{transform: translateX(-10%);}
     25%{transform: translateX(-60%);}
-    37%{transform: translateX(-140%);}
+    37%{transform: translateX(-180%);}
     62%{transform: translateX(-135%);}
     75%{transform: translateX(-60%);}
     87%{transform: translateX(-10%);}
@@ -391,7 +390,7 @@ p, h1{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    gap:3%;
+    gap:5%;
     color:white;
 }
  
@@ -400,8 +399,9 @@ p, h1{
 }
  
  .slide img {
-    width: 40vw;
-    height: 100%;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
 } 
 
 .slide2img{
@@ -517,8 +517,9 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 3%;
-    align-items: center;
     height: 10vh;
+
+    margin-bottom: -20px;
 }
 
 footer img{
@@ -528,16 +529,39 @@ footer img{
 }
 
 
-/* Media  width: 720px & 360px */
-
+/* Media */
 @media (max-width:860px) {
 
     .nav{
         transform: translateX(-100%);
         transition: transform 0.6s ease;
-        width: 40vw;
-        max-width: 220px;
+        width: 100vw;
     }
+
+    .nav-black{
+        display: flex;  
+        width: 1;
+        background-color:black;
+        z-index: 500;
+    }
+
+    .wrapper{
+        font-size: 12px;
+    }
+
+    .form{
+        font-size: 12px;
+    }
+
+    .footer{
+        font-size: 10px;
+        flex-flow: column;
+        height: 3%;
+        padding:1%;
+        margin-top:50px;
+    }
+
+
 
     .nav-btn{
         display: flex;
@@ -555,21 +579,46 @@ footer img{
 
     .content{
         width:100vw;
-    }
-
-    .sidebar{
-        width:0%
+        margin-left: -20%;
     }
 
     header{
-        background: url('./img/Header/header.png') no-repeat center;
-        background-size: cover;
-        width: 100%;
-        height: 40%;
-        display:none; 
+        background: url('./images/Header/Logo.png') no-repeat center;
+        background-size: 60%;
+        width: 100vw;
+        height: 30vh;
     }
 
+    .sidebar button i{
+        position:absolute;
+    }
 
+    .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+        width:25vw;
+        height:50vh;
+    }
+
+    .gif_lvl1{
+        height:50vh;
+    }
+
+    form{
+        width: 90%;
+
+    }
+
+}
+
+@media (max-width:720px){
+    .gif_lvl1{
+        height:50vh;
+        max-height: 30vh;
+    }
+
+    p{
+        font-size: 0.9em;
+
+    }
 }
 
 
@@ -577,7 +626,6 @@ footer img{
 
     .nav{
         width: 100vw;
-        
         display: flex;
         align-items: center;
         justify-content: center;  
@@ -585,10 +633,124 @@ footer img{
 
 }
 
-@media (max-width:860px){
+
+@media (max-width:1250px){
+
+    .navigation{
+        padding-left: 35%;
+    }
+
+    .footer img{
+        width:60px; 
+    }
+
+}
+
+@media (max-width:1000px){
+.form_content{
+    flex-direction: column;
+}
+
+.payment{
+    flex-direction: row;
+}
+
+.concert p{
+    padding:40px;
+}
+
+.gif_lvl1{
+    height:50vh;
+}
+
+.slides {
+    gap:30px;
+}
+
+@keyframes slide {
+
+    0%{ transform: translateX(-0%);}
+    12%{transform: translateX(-10%);}
+    25%{transform: translateX(-60%);}
+    37%{transform: translateX(-300%);}
+    62%{transform: translateX(-200%);}
+    75%{transform: translateX(-60%);}
+    87%{transform: translateX(0%);}
+    100%{transform: translateX(-0%);}
+
+}
+
+}
+
+@media (max-width:780px){
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .slides {
+        gap:0
+    }
+
+    @keyframes slide {
+
+        0%{ transform: translateX(-0%);}
+        12%{transform: translateX(-10%);}
+        25%{transform: translateX(-60%);}
+        37%{transform: translateX(-150%);}
+        62%{transform: translateX(-80%);}
+        75%{transform: translateX(-60%);}
+        87%{transform: translateX(0%);}
+        100%{transform: translateX(-0%);}
+    
+    }
+
+    .navigation{
+        padding-left: 100px;
+    }
+
+
+
+
+
+}
+
+@media (max-width:480px){
 
     .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
-        width:25vw;
-        height:50vh;
+        width:40vw;
+        height:40vh;
     }
+
+    .strings, .woodwinds{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .drums, .piano{
+        width:60vw;
+        height: 30vh;
+    }
+
+    .payment{
+        font-size:10px;
+    }
+
+    .payment img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .navigation{
+        padding-left: 150px;
+
+        background-color: red;
+    }
+
+    
+
+
+
+
 }
