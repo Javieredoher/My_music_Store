@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+html {
+    scroll-behavior: smooth;
+   
+  }
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+body{
+    
+    background-color: black;
+}
+
+.main{ 
+    display: flex;
+    flex-direction: row;  
+    overflow-x: hidden;
+}
+
+.content{
+    width: 80vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sidebar{
+
+    width: 20vw; 
+    height: 100%;
+    position: sticky;
+    background-color: rgba(255, 255, 0, 0);
+}
+
+.Separator{
+    clear: both;
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Sidebar */
+
+.navigation{
+    /* background-color:red; */
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    gap:5vh;
+    padding:10px;
+}
+
+#Logo{
+    width:200px;
+}
+
+.nav-btn{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: none; /* Change1 */
+}
+
+.open-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.nav{
+    
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+    max-width: 20vw; 
+
+    background-color: yellow;
+
+    /* display:none; */
+}
+
+.nav.visible{
+    transform: translateX(0);
+}
+
+.nav-black{
+    background-color: black;
+    display: flex;    
+}
+
+.nav-black.visible{
+    transition-delay: 0.4s;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a { 
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 5%;
+    color: white;
+}
+
+.close-btn{
+    right: 5px;
+    top: 10px;
+    position: absolute;
+}
+
+li ul li a {
+    padding-left: 30%;
+    
+} 
+
+li ul li a:hover, li a:hover{
+    color:goldenrod;
+}
+
+i{
+    color: white
+}
+
+p{
+    font-size:18px
+}
+
+/*  Header */
+
+header{
+    background: url('./images/Header/Logo.png') no-repeat center;
+    background-size:80%;
+    width: 100%;
+    height: 45vh;
+}
+
+
+/* Store Section */
+
+.Store p{
+    color:white;
+    font-size: 20px;
+    background-color: rgba(218, 165, 32, 0.767);
+    padding: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display:block;
+    text-align: center;
+}
+
+.percussion p{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.strings, .woodwinds{
+    display:flex;
+    justify-content: space-around;
+}
+
+.woodwinds{
+    margin-bottom: 20px;
+}
+
+.guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+    width:20vw;
+    height:90vh;
+    margin-top: 40px;
+    border-radius: 20px;   
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+
+.percussion{
+    display: flex;
+    flex-flow: column;
+    justify-content:space-around;
+    align-items:center;
+    margin-bottom: 20px
+}
+
+.drums, .piano{
+    width:45vw;
+    height: 45vh;
+    border-radius:20px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.guitar{
+    background: url('./images/Instruments/Guitar.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.violin{
+    background: url('./images/Instruments/Violin.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.bass{
+    background: url('./images/Instruments/Bass.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.flute{
+    background: url('./images/Instruments/Flute.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.clarinet{
+    background: url('./images/Instruments/Clarinet.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.trumpet{
+    background: url('./images/Instruments/Trumpet.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.drums{
+    background: url('./images/Instruments/Drums.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+.piano{
+    background: url('./images/Instruments/Piano.png') no-repeat center;
+    background-size: 100% 100%; 
+}
+
+
+/* Concert */
+
+p, h1{
+    color: white;
+    padding:1vw;
+}
+
+.concert p{
+    padding: 2vw;
+    
+}
+
+.concert{
+    margin-bottom: 30px;
+}
+
+.gifs{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 2vw;
+}
+
+.gif_lvl1{
+    display:flex;
+    width: 60vw;
+    height:65vh;
+
+    gap:2%;
+}
+
+.gif1,.gif2,.gif3{
+    height:100%;
+    width: 32%;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    gap:5%;
+
+    border-radius:20px;
+}
+
+.gif1_1{
+    width:100%;
+    height:35%;
+    /*background-image: url('https://media0.giphy.com/media/voHUEbyWiHe5a/giphy.gif?cid=790b7611fd41cb0c21499e6fc873d80368a2b05e36fbb769&rid=giphy.gif&ct=g');
+    */background-size:100% 100%;
+    border-radius:20px;
+}
+
+
+.gif1_2{
+    width:100%;
+    height:60%;  
+    background-image: url('https://media0.giphy.com/media/1rSioV1UX6ZWZv9n4q/giphy.gif?cid=790b7611e1a6b1b79224cae6e7eff03b80a9ea95f3c5853f&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+    border-radius:20px;
+    border-radius:20px;
+}
+
+.gif2{
+    background-image: url('https://media0.giphy.com/media/l0HlvGByFLvFJreYE/giphy.gif?cid=790b7611a3a2d60d5e02dbacd084944e0bb3d2fe3f7c520d&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+}
+
+.gif3_1{
+    width:100%;
+    height:50%;
+    background-image: url('https://media0.giphy.com/media/l2a8oapqbUhlanPK0m/giphy.gif?cid=790b7611c53f02b4e74b92092f1c9074611fe185e6574e0d&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+    border-radius:20px;
+
+}
+
+.gif3_2{
+    width:100%;
+    height:50%;  
+    background-image: url('https://media2.giphy.com/media/qVDkVk4xo0q0U/giphy.gif?cid=790b76113df113ea791d8686a084887e5959ab1afe4a3df6&rid=giphy.gif&ct=g');
+    background-size:100% 100%;
+    border-radius:20px;
+}
+
+/* Slider */
+
+@keyframes slide {
+
+    0%{ transform: translateX(-0%);}
+    12%{transform: translateX(-10%);}
+    25%{transform: translateX(-60%);}
+    37%{transform: translateX(-180%);}
+    62%{transform: translateX(-135%);}
+    75%{transform: translateX(-60%);}
+    87%{transform: translateX(-10%);}
+    100%{transform: translateX(-15%);}
+
+}
+
+.slide li, .slide ul{
+    list-style: none;
+}
+ 
+.wrapper {
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+    height: 85vh;
+    gap:2%
+
+    /* background-color:aqua;  */
+
+    /* position: absolute;  */
+}
+ 
+
+ 
+.slides {
+    /* position: relative; */
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius:20px
+}
+ 
+.slide {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    color:white;
+}
+ 
+.slides:hover .slide {
+    animation-play-state: paused;
+}
+ 
+ .slide img {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+} 
+
+.slide2img{
+    width:30vw;
+}
+ 
+.slide a {
+    width: 100%;
+    display: inline-block;
+   
+} 
+ 
+
+.slider-controler {
+
+    padding: 5px;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+ 
+
+
+
+/*Contact*/
+
+.form{
+    text-align: center;
+    clear: both;
+}
+
+.form_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 4%;      
+}
+
+.payment{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 1.0em;
+    align-items: center;
+}
+
+.payment img{
+    width: 85px;
+    height: 85px;
+    padding: 10px
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+    margin: 5%;
+    align-items: center;
+    gap: 5px;
+}
+
+form input{
+    border-radius: 28px;
+    border: 0px;
+    padding-left: 20px;
+    font-size:1.1em;
+}
+
+form textarea{
+    border-radius: 28px;
+    border: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size:1.4em;
+
+}
+
+button{
+    border-radius: 28px;
+    height: 2em;
+    width: 10em;
+    justify-content:center;
+    background-color:goldenrod;
+    margin-top:1%;
+    font-size:1em;
+
+}
+
+
+.f1{
+    height:25px;
+    width: 100%;
+
+}
+
+.f2{
+    height:200px;
+    width: 100%;
+}
+
+
+/*Footer*/
+
+footer{
+    background-color:goldenrod;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    height: 10vh;
+
+    margin-bottom: -20px;
+}
+
+footer img{
+    width: 3vw;
+    height: 6vh;
+    padding-right: 2%;
+}
+
+
+/* Media */
+@media (max-width:860px) {
+
+    .nav{
+        transform: translateX(-200%);
+        transition: transform 0.6s ease;
+        width: 100vw;
+    }
+
+    .nav-black{
+        display: flex;  
+        background-color:black;
+    }
+
+    .wrapper{
+        font-size: 12px;
+    }
+
+    .form{
+        font-size: 12px;
+    }
+
+    .footer{
+        font-size: 10px;
+        flex-flow: column;
+        height: 3%;
+        padding:1%;
+        margin-top:50px;
+    }
+
+
+
+    .nav-btn{
+        display: flex;
+    }
+
+
+    .main{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    width: 100vw;
+    background-color:black;
+    overflow: hidden;
+    }
+
+    .content{
+        width:100vw;
+        margin-left: -20%;
+    }
+
+    header{
+        background: url('./images/Header/Logo.png') no-repeat center;
+        background-size: 60%;
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .sidebar button i{
+        position:absolute;
+    }
+
+    .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+        width:25vw;
+        height:50vh;
+    }
+
+    .gif_lvl1{
+        height:50vh;
+    }
+
+    form{
+        width: 90%;
+
+    }
+
+}
+
+@media (max-width:720px){
+    .gif_lvl1{
+        height:50vh;
+        max-height: 30vh;
+    }
+
+    p{
+        font-size: 0.9em;
+
+    }
+}
+
+
+@media (max-width:360px) {
+
+    .nav{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+}
+
+
+@media (max-width:1250px){
+
+    .navigation{
+        padding-left: 35%;
+    }
+
+    .footer img{
+        width:60px; 
+    }
+
+}
+
+@media (max-width:1000px){
+.form_content{
+    flex-direction: column;
+}
+
+.payment{
+    flex-direction: row;
+}
+
+.concert p{
+    padding:40px;
+}
+
+.gif_lvl1{
+    height:50vh;
+}
+
+.slides {
+    gap:30px;
+}
+
+@keyframes slide {
+
+    0%{ transform: translateX(-0%);}
+    12%{transform: translateX(-10%);}
+    25%{transform: translateX(-60%);}
+    37%{transform: translateX(-300%);}
+    62%{transform: translateX(-200%);}
+    75%{transform: translateX(-60%);}
+    87%{transform: translateX(0%);}
+    100%{transform: translateX(-0%);}
+
+}
+
+}
+
+@media (max-width:780px){
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .slides {
+        gap:0
+    }
+
+    @keyframes slide {
+
+        0%{ transform: translateX(-0%);}
+        12%{transform: translateX(-10%);}
+        25%{transform: translateX(-60%);}
+        37%{transform: translateX(-150%);}
+        62%{transform: translateX(-80%);}
+        75%{transform: translateX(-60%);}
+        87%{transform: translateX(0%);}
+        100%{transform: translateX(-0%);}
+    
+    }
+
+    .navigation{
+        padding-left: 100px;
+    }
+
+
+
+
+
+}
+
+@media (max-width:480px){
+
+    .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+        width:40vw;
+        height:40vh;
+    }
+
+    .strings, .woodwinds{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .drums, .piano{
+        width:60vw;
+        height: 30vh;
+    }
+
+    .payment{
+        font-size:10px;
+    }
+
+    .payment img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .navigation{
+        padding-left: 150px;
+
+    }
+
+    
+
+
+
+
+}
