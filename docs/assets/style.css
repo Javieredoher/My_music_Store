@@ -2,16 +2,18 @@
 
 html {
     scroll-behavior: smooth;
+   
   }
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Muli', sans-serif;
 }
 
 body{
-    font-family: 'Muli', sans-serif;
+    
     background-color: black;
 }
 
@@ -29,7 +31,7 @@ body{
 .sidebar{
 
     width: 20vw; 
-    height:100vh;
+    height: 100%;
     position: sticky;
     background-color: rgba(255, 255, 0, 0);
 }
@@ -45,6 +47,19 @@ a {
 
 
 /* Sidebar */
+
+.navigation{
+    /* background-color:red; */
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    gap:5vh;
+    padding:10px;
+}
+
+#Logo{
+    width:200px;
+}
 
 .nav-btn{
     border: none;
@@ -70,6 +85,8 @@ a {
     width: 100%;
     max-width: 20vw; 
 
+    background-color: yellow;
+
     /* display:none; */
 }
 
@@ -79,6 +96,9 @@ a {
 
 .nav-black{
     background-color: black;
+    display: flex;
+   
+
     
 }
 .nav-black.visible{
@@ -86,7 +106,6 @@ a {
 }
 
 li{
-    margin: 20% 0px; 
     list-style-type: none;
 }
 
@@ -108,6 +127,10 @@ li ul li a {
     
 } 
 
+li ul li a:hover, li a:hover{
+    color:goldenrod;
+}
+
 i{
     color: white
 }
@@ -119,8 +142,8 @@ p{
 /*  Header */
 
 header{
-    background: url('./images/Header/Header.png') no-repeat center;
-    background-size: 100% 100%;
+    background: url('./images/Header/Logo.png') no-repeat center;
+    background-size:80%;
     width: 100%;
     height: 45vh;
 }
@@ -234,6 +257,7 @@ p, h1{
 
 .concert p{
     padding: 2vw;
+    
 }
 
 .concert{
@@ -263,13 +287,16 @@ p, h1{
     display: flex;
     flex-flow: column nowrap;
     gap:5%;
+
+    border-radius:20px;
 }
 
 .gif1_1{
     width:100%;
     height:35%;
-    background-image: url('https://media0.giphy.com/media/voHUEbyWiHe5a/giphy.gif?cid=790b7611fd41cb0c21499e6fc873d80368a2b05e36fbb769&rid=giphy.gif&ct=g');
-    background-size:100% 100%;
+    /*background-image: url('https://media0.giphy.com/media/voHUEbyWiHe5a/giphy.gif?cid=790b7611fd41cb0c21499e6fc873d80368a2b05e36fbb769&rid=giphy.gif&ct=g');
+    */background-size:100% 100%;
+    border-radius:20px;
 }
 
 
@@ -278,6 +305,8 @@ p, h1{
     height:60%;  
     background-image: url('https://media0.giphy.com/media/1rSioV1UX6ZWZv9n4q/giphy.gif?cid=790b7611e1a6b1b79224cae6e7eff03b80a9ea95f3c5853f&rid=giphy.gif&ct=g');
     background-size:100% 100%;
+    border-radius:20px;
+    border-radius:20px;
 }
 
 .gif2{
@@ -290,6 +319,7 @@ p, h1{
     height:50%;
     background-image: url('https://media0.giphy.com/media/l2a8oapqbUhlanPK0m/giphy.gif?cid=790b7611c53f02b4e74b92092f1c9074611fe185e6574e0d&rid=giphy.gif&ct=g');
     background-size:100% 100%;
+    border-radius:20px;
 
 }
 
@@ -298,54 +328,110 @@ p, h1{
     height:50%;  
     background-image: url('https://media2.giphy.com/media/qVDkVk4xo0q0U/giphy.gif?cid=790b76113df113ea791d8686a084887e5959ab1afe4a3df6&rid=giphy.gif&ct=g');
     background-size:100% 100%;
+    border-radius:20px;
 }
 
+/* Slider */
 
+@keyframes slide {
 
+    0%{ transform: translateX(-15%);}
+    12%{transform: translateX(-10%);}
+    25%{transform: translateX(-60%);}
+    37%{transform: translateX(-140%);}
+    62%{transform: translateX(-135%);}
+    75%{transform: translateX(-60%);}
+    87%{transform: translateX(-10%);}
+    100%{transform: translateX(-15%);}
 
+}
 
+.slide li, .slide ul{
+    list-style: none;
+}
+ 
+.wrapper {
 
-/* Producer */
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
-.producer_content{
+    width:100%;
+    height: 85vh;
+    gap:2%
+
+    /* background-color:aqua;  */
+
+    /* position: absolute;  */
+}
+ 
+
+ 
+.slides {
+    /* position: relative; */
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius:20px
+}
+ 
+.slide {
     width: 100%;
     height: 100%;
+    /* background-color: yellow; */
+
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
     display:flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    flex-flow: row;
-    color:rgb(246, 246, 246);
-    gap: 2vw;
-    margin-top: 20px; 
+    gap:3%;
+    color:white;
 }
-
-.producer_content img{
-    width: 30vw;
-    height: 80vh;
+ 
+.slides:hover .slide {
+    animation-play-state: paused;
 }
+ 
+ .slide img {
+    width: 40vw;
+    height: 100%;
+} 
 
-/* Academy */
+.slide2img{
+    width:30vw;
+}
+ 
+.slide a {
+    width: 100%;
+    display: inline-block;
+   
+} 
+ 
 
-.academy_content{
+.slider-controler {
+
+    padding: 5px;
     display:flex;
-    justify-content: center;
+    flex-flow:column nowrap;
     align-items: center;
-    flex-flow: row;
-    color:rgb(246, 246, 246);
-    gap: 2vw;
-    height:90vh;
+    justify-content: center;
 }
+ 
 
-.academy_content img{
-    width: 30vw;
-    height: 70vh;
-}
 
 
 /*Contact*/
 
 .form{
     text-align: center;
+    clear: both;
 }
 
 .form_content{
@@ -444,7 +530,7 @@ footer img{
 
 /* Media  width: 720px & 360px */
 
-@media (max-width:840px) {
+@media (max-width:860px) {
 
     .nav{
         transform: translateX(-100%);
@@ -460,17 +546,19 @@ footer img{
 
     .main{
     display: flex;
-    width: 100%;
     height: 100%;
     flex-direction: row;
+    width: 100vw;
+    background-color:black;
+    overflow: hidden;
     }
 
-    .main{
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color:blue;
-        overflow: hidden;
+    .content{
+        width:100vw;
+    }
+
+    .sidebar{
+        width:0%
     }
 
     header{
@@ -478,7 +566,7 @@ footer img{
         background-size: cover;
         width: 100%;
         height: 40%;
-        display:none;
+        display:none; 
     }
 
 
@@ -495,4 +583,12 @@ footer img{
         justify-content: center;  
     }
 
+}
+
+@media (max-width:860px){
+
+    .guitar, .violin, .bass, .flute, .clarinet, .trumpet{
+        width:25vw;
+        height:50vh;
+    }
 }

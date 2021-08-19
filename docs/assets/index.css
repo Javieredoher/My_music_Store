@@ -23,10 +23,10 @@ a{
 /*  Header */
 
 header{
-    background: url('./images/Header/Header.png') no-repeat center;
-    background-size: 100% 100%;
+    background: url('./images/Header/Logo.png') no-repeat center;
+    background-size:50%;
     width: 100%;
-    height: 45vh;
+    height: 40vh;
 }
 
 /* Init */
@@ -72,4 +72,40 @@ header{
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+}
+
+@media (max-width:640px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    header{
+        background: url('./images/Header/Logo.png') no-repeat center;
+        background-size:100%;
+        min-width: 100%;
+        min-height: 280px;
+    }
+
+    .Initial{
+        flex-direction: column;
+        gap: 5%;
+        padding:5px;
+         height: 80vh; 
+        align-items: center;
+    }
+
+    .iniText, p{
+        font-size: 14px;
+    }
+
+    .Init, .Services{
+        width: 60%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        min-width: 200px;
+    }
+
+
 }
